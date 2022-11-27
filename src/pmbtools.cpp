@@ -28,6 +28,7 @@ SOFTWARE.
 */
 #include"pmbtools.h"
 
+#ifdef EMBEDDED_PLATFORM
 #if defined(ARDUINO_ARCH_ESP32)
     #include "esp_task_wdt.h"
     uint32_t         h4channel=0;
@@ -84,6 +85,7 @@ SOFTWARE.
 #endif
 
 uint32_t _HAL_maxPayloadSize(){ return (_HAL_maxHeapBlock() - PMB_HEAP_SAFETY) / 2; }
+#endif
 //
 //
 //

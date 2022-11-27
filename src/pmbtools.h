@@ -42,6 +42,7 @@ SOFTWARE.
 #define RECORD_SEPARATOR "|"
 #define UNIT_SEPARATOR "~"
 
+#ifdef EMBEDDED_PLATFORM
 void            _HAL_analogFrequency(uint8_t pin,size_t f=PMB_PWM_DEFAULT);
 void            _HAL_analogWrite(uint8_t pin, uint32_t value);
 void            _HAL_attachAnalogPin(uint8_t pin);
@@ -52,6 +53,7 @@ bool            _HAL_isAnalogOutput(uint8_t p);
 uint32_t        _HAL_maxHeapBlock();
 size_t          _HAL_maxPayloadSize();
 std::string     _HAL_uniqueName(const std::string& prefix);
+#endif
 
 #if PMB_DEBUG
 void            dumpvs(const std::vector<std::string>& vs);

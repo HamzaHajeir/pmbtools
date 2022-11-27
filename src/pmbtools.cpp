@@ -85,7 +85,6 @@ SOFTWARE.
 #endif
 
 uint32_t _HAL_maxPayloadSize(){ return (_HAL_maxHeapBlock() - PMB_HEAP_SAFETY) / 2; }
-#endif
 //
 //
 //
@@ -118,6 +117,7 @@ void dumphex(const uint8_t* mem, size_t len) {
     }
 }
 
+#endif
 uint32_t hex2uint(const uint8_t* str){
     size_t res = 0;
     uint8_t c;

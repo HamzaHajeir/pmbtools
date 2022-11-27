@@ -38,6 +38,7 @@ SOFTWARE.
 #include<map>
 #include<unordered_map>
 #include<functional>
+#define CSTR(x) x.c_str()
 
 #define RECORD_SEPARATOR "|"
 #define UNIT_SEPARATOR "~"

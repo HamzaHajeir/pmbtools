@@ -31,7 +31,9 @@ SOFTWARE.
 
 #include"pmb_config.h"
 
+#ifdef EMBEDDED_PLATFORM
 #include<Arduino.h>
+#endif
 
 #include<string>
 #include<vector>
